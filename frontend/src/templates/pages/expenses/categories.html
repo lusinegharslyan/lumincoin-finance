@@ -1,0 +1,84 @@
+<div>
+    <h1 class="common-title">Расходы</h1>
+    <div class="categories-list">
+        <div class="category-block">
+            <h2 class="category-title">Еда</h2>
+            <div class="category-actions">
+                <a href="/expenses/category/edit" class="btn btn-primary btn-common"
+                   id="category-edit">Редактировать</a>
+                <button class="btn btn-danger btn-common" id="category-delete">Удалить</button>
+            </div>
+        </div>
+        <div class="category-block">
+            <h2 class="category-title">Жильё</h2>
+            <div class="category-actions">
+                <button class="btn btn-primary btn-common">Редактировать</button>
+                <button class="btn btn-danger btn-common">Удалить</button>
+            </div>
+        </div>
+        <div class="category-block">
+            <h2 class="category-title">Здоровье</h2>
+            <div class="category-actions">
+                <button class="btn btn-primary btn-common">Редактировать</button>
+                <button class="btn btn-danger btn-common">Удалить</button>
+            </div>
+        </div>
+        <div class="category-block">
+            <h2 class="category-title">Кафе</h2>
+            <div class="category-actions">
+                <button class="btn btn-primary btn-common">Редактировать</button>
+                <button class="btn btn-danger btn-common">Удалить</button>
+            </div>
+        </div>
+        <div class="category-block">
+            <h2 class="category-title">Авто</h2>
+            <div class="category-actions">
+                <button class="btn btn-primary btn-common">Редактировать</button>
+                <button class="btn btn-danger btn-common">Удалить</button>
+            </div>
+        </div>
+        <div class="category-block">
+            <h2 class="category-title">Одежда</h2>
+            <div class="category-actions">
+                <button class="btn btn-primary btn-common">Редактировать</button>
+                <button class="btn btn-danger btn-common">Удалить</button>
+            </div>
+        </div>
+        <div class="category-block">
+            <h2 class="category-title">Развлечения</h2>
+            <div class="category-actions">
+                <button class="btn btn-primary btn-common">Редактировать</button>
+                <button class="btn btn-danger btn-common">Удалить</button>
+            </div>
+        </div>
+        <div class="category-block">
+            <h2 class="category-title">Счета</h2>
+            <div class="category-actions">
+                <button class="btn btn-primary btn-common">Редактировать</button>
+                <button class="btn btn-danger btn-common">Удалить</button>
+            </div>
+        </div>
+        <div class="category-block">
+            <h2 class="category-title">Спорт</h2>
+            <div class="category-actions">
+                <button class="btn btn-primary btn-common">Редактировать</button>
+                <button class="btn btn-danger btn-common">Удалить</button>
+            </div>
+        </div>
+        <div class="category-block add-category-block">
+            <a href="/expenses/category/add" class="add-category-icon" id="category-add">+</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal-dialog" id="delete-modal-dialog">
+    <div class="modal-content rounded-3 shadow">
+        <div class="modal-body ">
+            <h5 class="modal-title">Вы действительно хотите удалить категорию? </h5>
+            <div class="modal-actions">
+                <button type="button" id="confirm-delete" class="btn btn-success">Да, удалить</button>
+                <button type="button" id="cancel-delete" class="btn btn-danger">Не удалять</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,225 @@
+@media (max-width: 1200px) {
+  .charts {
+    .chart-item {
+      width: 370px !important;
+    }
+  }
+}
+
+@media (max-width: 1060px) {
+  .charts {
+    .chart-item {
+      width: 320px !important;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .table-wrapper {
+    max-width: 650px !important;
+    overflow-x: auto !important;
+    min-width: 0 !important;
+  }
+
+  .charts {
+    .chart-item {
+      width: 280px !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .common-title {
+    font-size: 30px !important;
+  }
+  .category-title {
+    font-size: 24px !important;
+  }
+  .btn-common {
+    padding: 5px 13px !important;
+  }
+  .category-block {
+    width: 320px !important;
+    padding: 15px !important;
+    height: 110px !important;
+  }
+  .content-wrapper {
+    padding: 80px 40px !important;
+  }
+  .form .input-group {
+    width: 360px !important;
+  }
+  .modal-title {
+    font-size: 18px !important;
+  }
+  .common-date-filter-toolbar button {
+    font-size: 14px !important;
+    width: 90px !important;
+  }
+  .incomes-and-expenses-table tr td,
+  .incomes-and-expenses-table tr th {
+    font-size: 14px !important;
+    padding: 8px !important;
+  }
+  .table-wrapper {
+    width: 480px !important;
+  }
+  .layout-page .sidebar {
+    padding: 30px 10px !important;
+    width: 160px !important;
+
+    .dropdown {
+      .dropdown-toggle {
+        span {
+          width: 28px !important;
+          height: 28px !important;
+          margin-right: 10px !important;
+
+          img {
+            width: 14px !important;
+            height: 14px !important;
+          }
+        }
+
+        strong {
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
+  .layout-page .sidebar hr {
+    margin-inline: -10px !important;
+  }
+  .charts {
+    flex-direction: column;
+    margin-inline: auto;
+    gap: 10px !important;
+
+    .incomes-chart-block, .expenses-chart-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .chart-item {
+      width: 260px !important;
+    }
+
+    .vertical-line {
+      width: 100% !important;
+      height: 1px !important;
+    }
+  }
+  .common-date-filter-toolbar {
+    gap: 10px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .common-title {
+    font-size: 22px !important;
+    margin-bottom: 30px !important;
+  }
+  .category-title {
+    font-size: 20px !important;
+  }
+  .btn-common {
+    font-size: 12px !important;
+    padding: 3px 11px !important;
+  }
+  .category-block {
+    width: 280px !important;
+    height: 90px !important;
+  }
+  .content-wrapper {
+    padding: 60px 30px !important;
+  }
+  .form .input-group .form-control {
+    width: 330px !important;
+  }
+  .modal-title {
+    font-size: 16px !important;
+  }
+  .modal-actions button {
+    font-size: 14px !important;
+  }
+  .modal-dialog .modal-content .modal-body {
+    width: 340px !important;
+    padding: 30px !important;
+  }
+  .common-date-filter-toolbar button {
+    font-size: 12px !important;
+    width: 65px !important;
+    padding-block: 3px !important;
+  }
+  .incomes-and-expenses-table tr td,
+  .incomes-and-expenses-table tr th {
+    font-size: 12px !important;
+    padding: 3px !important;
+  }
+  .table-wrapper {
+    width: 380px !important;
+  }
+  .common-page {
+    h1 {
+      font-size: 32px !important;
+    }
+
+    .common-page-body {
+      width: 330px !important;
+    }
+  }
+
+}
+
+@media(max-width: 467px) {
+  .common-page {
+    h1 {
+      font-size: 28px !important;
+    }
+
+    .common-page-body {
+      width: 280px !important;
+    }
+  }
+  .charts {
+    justify-content: space-between;
+    gap: 25px !important;
+
+    .chart-item {
+      width: 240px !important;
+    }
+  }
+  .navbar-burger {
+    display: block !important;
+  }
+  .layout-page .sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: -160px;
+    transition: right 0.3s ease !important;
+  }
+}
+
+@media(max-width: 364px) {
+  .content-wrapper {
+    padding: 50px 10px !important;
+  }
+  .form .input-group {
+    width: 280px !important;
+  }
+  .modal-title {
+    font-size: 14px !important;
+  }
+  .modal-actions button {
+    font-size: 12px !important;
+  }
+  .modal-dialog .modal-content .modal-body {
+    width: 260px !important;
+    padding: 20px !important;
+  }
+  .table-wrapper {
+    width: 280px !important;
+  }
+}

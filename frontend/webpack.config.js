@@ -1,0 +1,61 @@
+const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+module.exports = {
+    entry: './src/app.js',
+    mode: 'development',
+    output: {
+        filename: 'app.js',
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "public"),
+        },
+        compress: true,
+        port: 9003,
+        historyApiFallback: true,
+    },
+    module: {
+        rules: [
+            {
+                test: /\.scss$/i,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader",
+                ],
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.(woff2?|ttf|eot|svg)$/i,
+                type: 'asset/resource',
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
+            }
+        ],
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html',
+        }),
+        new CopyPlugin({
+            patterns: [
+                {from: "./src/templates", to: "templates"},
+                {from: "./src/static/images", to: "images"},
+                {from: "./node_modules/bootstrap/dist/css/bootstrap.min.css", to: "css"},
+                {from: "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js", to: "js"},
+            ],
+        }),
+    ],
+}

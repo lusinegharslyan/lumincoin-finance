@@ -1,0 +1,29 @@
+<div>
+    <h1 class="common-title">Создание дохода/расхода</h1>
+    <form class="form">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Тип..." id="type">
+            <span id="type-error" class="error invalid-feedback">Заполните тип </span>
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Категория..." id="category">
+            <span id="category-error" class="error invalid-feedback">Заполните категорию </span>
+        </div>
+        <div class="input-group">
+            <input type="number" class="form-control" placeholder="Сумма в $..." id="amount">
+            <span id="amount-error" class="error invalid-feedback">Заполните сумму </span>
+        </div>
+        <div class="input-group">
+            <input type="date" class="form-control" placeholder="Дата..." id="date">
+            <span id="date-error" class="error invalid-feedback">Заполните дату </span>
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Комментарий..." id="comment">
+            <span id="comment-error" class="error invalid-feedback">Заполните комментарии </span>
+        </div>
+    </form>
+    <div>
+        <button class=" btn btn-success btn-common" style="margin-right: 10px" id="create-button">Создать</button>
+        <a href="/income&expenses" id="cancel-button" class="btn btn-danger btn-common">Отмена</a>
+    </div>
+</div>

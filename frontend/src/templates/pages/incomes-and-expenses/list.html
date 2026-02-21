@@ -1,0 +1,81 @@
+<div>
+    <h1 class="common-title">Доходы и расходы</h1>
+    <div class="common-actions-bar">
+        <a href="/income&expenses/create" class="btn btn-success btn-common">Создать доход</a>
+        <a href="/income&expenses/create" class="btn btn-danger btn-common">Создать расход</a>
+    </div>
+    <div class="common-date-filter-toolbar">
+        <button class="btn">Сегодня</button>
+        <button class="btn ">Неделя</button>
+        <button class="btn  ">Месяц</button>
+        <button class="btn ">Год</button>
+        <button class="btn ">Все</button>
+        <button class="btn ">Интервал</button>
+        <button class="btn  ">Сегодня</button>
+        <div class="common-custom-date-filter">
+            <span>с</span><span class="custom-date">Дата</span> <span>по</span><span
+                class="custom-date">Дата</span>
+        </div>
+    </div>
+    <div class="table-wrapper">
+        <table class="incomes-and-expenses-table">
+            <thead>
+            <tr class="text-dark-blue">
+                <th style="width:130px">№ операции</th>
+                <th>Тип</th>
+                <th>Категория</th>
+                <th>Сумма</th>
+                <th>Дата</th>
+                <th>Комментарий</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="fw-bold" style="width:130px">1</td>
+                <td class="text-success">доход</td>
+                <td>зарплата</td>
+                <td>500$</td>
+                <td>11.09.2022</td>
+                <td></td>
+                <td class="table-actions-cell">
+                    <span id="delete-icon">
+                        <img src="/images/trash-icon.png" alt="trashIcon">
+                    </span>
+                    <a href="/income&expenses/edit" class="text-decoration-none" id="edit-icon">
+                        <img src="/images/pen-icon.png" alt="penIcon">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="fw-bold">2</td>
+                <td class="text-danger">расход</td>
+                <td>жильё</td>
+                <td>2 500$</td>
+                <td>12.09.2022</td>
+                <td></td>
+                <td class="table-actions-cell">
+                    <span>
+                        <img src="/images/trash-icon.png" alt="trashIcon">
+                    </span>
+                    <span>
+                        <img src="/images/pen-icon.png" alt="penIcon">
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal-dialog" id="delete-modal-dialog">
+    <div class="modal-content rounded-3 shadow">
+        <div class="modal-body ">
+            <h5 class="modal-title">Вы действительно хотите удалить операцию?</h5>
+            <div class="modal-actions">
+                <button type="button" id="confirm-delete" class="btn btn-success btn-common">Да, удалить</button>
+                <button type="button" id="cancel-delete" class="btn btn-danger btn-common">Не удалять</button>
+            </div>
+        </div>
+    </div>
+</div>
