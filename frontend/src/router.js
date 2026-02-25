@@ -142,7 +142,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/auth/login.html',
                 useLayout: false,
                 load: () => {
-                    new Login();
+                    new Login(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -151,13 +151,13 @@ export class Router {
                 filePathTemplate: '/templates/pages/auth/sign-up.html',
                 useLayout: false,
                 load: () => {
-                    new SignUp();
+                    new SignUp(this.openNewRoute.bind(this));
                 },
             },
             {
                 route: '/logout',
                 load: () => {
-                    new Logout();
+                    new Logout(this.openNewRoute.bind(this));
                 }
             },
         ]
