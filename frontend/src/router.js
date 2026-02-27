@@ -28,7 +28,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/main.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new Main();
+                    new Main(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -37,7 +37,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/incomes/categories.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new IncomeCategories();
+                    new IncomeCategories(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -46,7 +46,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/incomes/categories-edit.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new IncomeCategoriesEdit();
+                    new IncomeCategoriesEdit(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -55,13 +55,13 @@ export class Router {
                 filePathTemplate: '/templates/pages/incomes/categories-add.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new IncomeCategoriesAdd();
+                    new IncomeCategoriesAdd(this.openNewRoute.bind(this));
                 },
             },
             {
                 route: '/incomes/category/delete',
                 load: () => {
-                    new IncomeCategoriesDelete();
+                    new IncomeCategoriesDelete(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -70,7 +70,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/expenses/categories.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new ExpenseCategories();
+                    new ExpenseCategories(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -79,7 +79,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/expenses/categories-edit.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new ExpenseCategoriesEdit();
+                    new ExpenseCategoriesEdit(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -88,13 +88,13 @@ export class Router {
                 filePathTemplate: '/templates/pages/expenses/categories-add.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new ExpenseCategoriesAdd();
+                    new ExpenseCategoriesAdd(this.openNewRoute.bind(this));
                 },
             },
             {
                 route: '/expenses/category/delete',
                 load: () => {
-                    new ExpenseCategoriesDelete();
+                    new ExpenseCategoriesDelete(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -103,7 +103,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/incomes-and-expenses/list.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new IncomeAndExpensesList();
+                    new IncomeAndExpensesList(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -112,7 +112,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/incomes-and-expenses/create.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new IncomeAndExpensesCreate();
+                    new IncomeAndExpensesCreate(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -121,13 +121,13 @@ export class Router {
                 filePathTemplate: '/templates/pages/incomes-and-expenses/edit.html',
                 useLayout: '/templates/layout.html',
                 load: () => {
-                    new IncomeAndExpensesEdit();
+                    new IncomeAndExpensesEdit(this.openNewRoute.bind(this));
                 },
             },
             {
                 route: '/income&expenses/delete',
                 load: () => {
-                    new IncomeAndExpensesDelete();
+                    new IncomeAndExpensesDelete(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -142,7 +142,7 @@ export class Router {
                 filePathTemplate: '/templates/pages/auth/login.html',
                 useLayout: false,
                 load: () => {
-                    new Login();
+                    new Login(this.openNewRoute.bind(this));
                 },
             },
             {
@@ -151,13 +151,13 @@ export class Router {
                 filePathTemplate: '/templates/pages/auth/sign-up.html',
                 useLayout: false,
                 load: () => {
-                    new SignUp();
+                    new SignUp(this.openNewRoute.bind(this));
                 },
             },
             {
                 route: '/logout',
                 load: () => {
-                    new Logout();
+                    new Logout(this.openNewRoute.bind(this));
                 }
             },
         ]

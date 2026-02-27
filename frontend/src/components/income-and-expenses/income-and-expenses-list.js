@@ -1,5 +1,11 @@
+import {AuthUtils} from "../../utils/auth-utils";
+
 export class IncomeAndExpensesList {
-    constructor() {
+    constructor(openNewRoute) {
+        this.openNewRoute = openNewRoute;
+        if (!AuthUtils.getAuthInfo(AuthUtils.accessTokenKey)) {
+            return this.openNewRoute('/login');
+        }
         this.findElements();
         this.deleteIconElement.addEventListener('click', this.openDeleteConfirmationPopup.bind(this));
         this.confirmDeleteButtonElement.addEventListener('click', this.closeDeleteConfirmationPopup.bind(this));

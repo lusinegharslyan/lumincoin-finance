@@ -1,5 +1,11 @@
+import {AuthUtils} from "../../utils/auth-utils";
+
 export class IncomeCategories {
-    constructor() {
+    constructor(openNewRoute) {
+        this.openNewRoute = openNewRoute;
+        if (!AuthUtils.getAuthInfo(AuthUtils.accessTokenKey)) {
+            return this.openNewRoute('/login');
+        }
         this.findElements();
         this.categoryDeleteElement.addEventListener('click', this.openCategoryDeletePopup.bind(this));
         this.cancelDeleteButtonElement.addEventListener('click', this.closeDeleteConfirmationPopup.bind(this));
