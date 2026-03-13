@@ -85,14 +85,10 @@
         }
 
         .btn-toggle-nav {
-          li{
-
-          }
           a {
             color: common.$light-blue !important;
             width: 100%;
-            margin-bottom:1px !important;
-
+            margin-bottom: 1px !important;
           }
         }
       }
@@ -100,13 +96,15 @@
 
     .balance {
       margin-bottom: 20px;
+      display: flex;
+      gap: 10px;
       font-family: 'RobotoMedium', sans-serif;
       font-size: 14px !important;
       color: common.$dark-blue;
 
       span {
-        margin-left: 10px;
         color: common.$light-blue;
+        cursor: pointer;
       }
     }
 
@@ -137,11 +135,14 @@
           margin-right: 16px;
           align-items: center;
           justify-content: center;
-          width: 36px;
-          height: 36px;
+          min-width: 36px;
+          min-height: 36px;
         }
 
         strong {
+          min-width: 0;
+          white-space: wrap;
+          word-wrap: break-word;
           font-size: 14px !important;
           color: common.$dark-blue;
         }

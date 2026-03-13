@@ -1,6 +1,9 @@
 @use "common" as common;
-
-.incomes-and-expenses-table {
+.table-wrapper{
+  max-height: 460px;
+  overflow: auto;
+}
+.operations-table {
   width: 100%;
   border-top: 1px solid #DEE2E6;
 
@@ -23,8 +26,10 @@
     align-items: center;
     justify-content: center;
 
-    span {
+    button{
       cursor: pointer !important;
+      border:none;
+      background-color: transparent;
     }
   }
 }
@@ -38,7 +43,7 @@
   .input-group {
     width: 397px !important;
 
-    input {
+    input,select {
       border-color: #DEE2E6 !important;
       color: common.$gray !important;
       border-radius: 8px !important;
@@ -64,7 +69,6 @@
     .modal-body {
       width: 530px !important;
       background-color: white !important;
-      /*height: 160px !important;*/
       flex-grow: 0 !important;
       border-radius: 12px !important;
       padding: 40px !important;

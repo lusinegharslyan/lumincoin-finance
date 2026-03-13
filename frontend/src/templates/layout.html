@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/income&expenses" class="nav-link ">
+                <a href="/operations" class="nav-link ">
             <span class="bi pe-none me-2">
                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -55,16 +55,16 @@
                 </button>
                 <div class="collapse" id="category-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal small  ">
-                        <li><a href="/incomes" class=" d-inline-flex text-decoration-none rounded nav-link ">Доходы</a>
+                        <li><a href="/income" class=" d-inline-flex text-decoration-none rounded nav-link ">Доходы</a>
                         </li>
-                        <li><a href="/expenses" class=" d-inline-flex text-decoration-none rounded nav-link">Расходы</a>
+                        <li><a href="/expense" class=" d-inline-flex text-decoration-none rounded nav-link">Расходы</a>
                         </li>
                     </ul>
                 </div>
             </li>
         </ul>
-        <div class="balance">Баланс:
-            <span>500$</span>
+        <div class="balance" >Баланс:
+            <div id="balance-block"><span id="balance"></span><span>$</span></div>
         </div>
         <hr>
         <div class="dropdown">
@@ -72,7 +72,7 @@
            <span class="bg-body-secondary">
                 <img src="/images/person.png" alt="avatar">
            </span>
-                <strong>Roman Chernov</strong>
+                <strong id="profile-name"></strong>
             </a>
             <ul class="dropdown-menu text-small shadow" data-popper-placement="top-start" >
                 <li>
@@ -82,4 +82,21 @@
         </div>
     </div>
     <div class="content-wrapper" id="content-layout"></div>
+</div>
+<div class="modal-dialog" id="balance-modal-dialog">
+    <div class="modal-content rounded-3 shadow">
+        <div class="modal-body ">
+            <h5 class="modal-title">Редактирование баланса</h5>
+            <div id="save-balance-error" class="error invalid-feedback text-center mb-3">Произошла ошибка, обратитесь в поддержку.</div>
+            <form class="form">
+            <div class="input-group">
+                <input type="number" id="balance-input" class="form-control" placeholder="Баланс">
+            </div>
+                </form>
+            <div class="modal-actions">
+                <button type="button" id="save-balance" class="btn btn-success btn-common">Сохранить</button>
+                <button type="button" id="cancel-balance-change" class="btn btn-danger btn-common">Отменить</button>
+            </div>
+        </div>
+    </div>
 </div>

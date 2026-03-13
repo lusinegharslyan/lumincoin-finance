@@ -1,6 +1,5 @@
 export class ValidationUtils {
     static validateForm(validations) {
-        console.log(validations)
         let isValid = true;
 
         for (let i = 0; i < validations.length; i++) {

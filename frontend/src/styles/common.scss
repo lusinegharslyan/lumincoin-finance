@@ -52,11 +52,11 @@ $gray: #6C757D;
     align-items: center;
     justify-content: center;
 
-    &:focus {
+  }
+    .selected {
       color: white !important;
       background-color: $gray !important;
     }
-  }
 
   .common-custom-date-filter {
     display: flex;
@@ -70,7 +70,11 @@ $gray: #6C757D;
     }
 
     .custom-date {
-      text-decoration: underline;
+      border-radius:4px ;
+      border: 1px solid #6C757D !important;
+      color:  #6C757D !important;
+      font-size:  14px !important;
+      padding: 2px !important;
     }
   }
 }

@@ -3,7 +3,6 @@ import {HttpUtils} from "../utils/http-utils";
 export class AuthService {
     static async login(data) {
         const result = await HttpUtils.request('/login', 'POST', false, data)
-        console.log(result)
         if (result.error || !result.response || (result.response && (!result.response.tokens.accessToken || !result.response.tokens.refreshToken || !result.response.user.id || !result.response.user.name))) {
             return false;
         }
