@@ -5,7 +5,8 @@ export class AuthUtils {
     static refreshTokenKey = 'refreshToken';
     static userInfoTokenKey = 'userInfo';
 
-    static setAuthInfo(accessToken, refreshToken, userInfo = null) {
+    static setAuthInfo(accessToken, refreshToken, userInfo = null)
+    {
         localStorage.setItem(this.accessTokenKey, accessToken);
         localStorage.setItem(this.refreshTokenKey, refreshToken);
         if (userInfo) {
@@ -47,7 +48,6 @@ export class AuthUtils {
                 const tokens = await response.json();
                 if (tokens && !tokens.error) {
                     this.setAuthInfo(tokens.accessToken, tokens.refreshToken);
-
                     result = true;
                 }
             }

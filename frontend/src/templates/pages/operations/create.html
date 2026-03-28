@@ -1,13 +1,14 @@
 <div>
-    <h1 class="common-title">Редактирование дохода/расхода</h1>
+    <h1 class="common-title">Создание дохода/расхода</h1>
     <form class="form">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Тип..." id="type">
-            <span id="type-error" class="error invalid-feedback">Заполните тип </span>
+            <select class="form-control" id="type" disabled="disabled">
+                <option value="income">Доход</option>
+                <option value="expense">Расход</option>
+            </select>
         </div>
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Категория..." id="category">
-            <span id="category-error" class="error invalid-feedback">Заполните категорию </span>
+            <select id="category" class="form-control"></select>
         </div>
         <div class="input-group">
             <input type="number" class="form-control" placeholder="Сумма в $..." id="amount">
@@ -24,6 +25,6 @@
     </form>
     <div>
         <button class=" btn btn-success btn-common" style="margin-right: 10px" id="create-button">Создать</button>
-        <a href="/income&expenses" id="cancel-button" class="btn btn-danger btn-common ">Отмена</a>
+        <a href="/operations" id="cancel-button" class="btn btn-danger btn-common">Отмена</a>
     </div>
 </div>

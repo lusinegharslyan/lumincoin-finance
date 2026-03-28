@@ -1,15 +1,12 @@
-// use 'migrate-mongo create {$migration_name}' or 'docker exec -ti nodejs-container ./node_modules/.bin/migrate-mongo create {$migration_name}' for creating migration
-// use 'docker exec -ti nodejs-container ./node_modules/.bin/migrate-mongo up' for applying migration
-
-const config = require('./src/config/config');
+const config = require('./config/config');
 const configMigrations = {
     mongodb: {
         url: config.db.dbUrl,
         databaseName: config.db.dbName,
     },
     moduleSystem: 'commonjs',
-    migrationsDir: "migrations",
-    changelogCollectionName: "migrations",
+    migrationsDir: "data",
+    changelogCollectionName: "data",
     migrationFileExtension: ".js",
     useFileHash: false
 };
